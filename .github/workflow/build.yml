@@ -1,8 +1,6 @@
 name: Linux-arm64 Cloudlfare DNS Docker
 on: 
   workflow_dispatch:  # allows to run the workflow manually from the Actions tab
-  push:
-   branches: main
 jobs:
   build-and-docker:
     runs-on: ubuntu-24.04-arm
