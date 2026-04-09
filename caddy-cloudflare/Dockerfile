@@ -1,4 +1,4 @@
-# syntax=docker/dockerfile:1
+# syntax=docker/dockerfile:1 
 FROM caddy:builder AS builder
 
 RUN xcaddy build \
