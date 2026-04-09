@@ -20,7 +20,7 @@ jobs:
   # Job to get image and repository details
   metadata:
     name: Get image and repository details
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04-arm
 
     outputs:
       version: ${{ steps.version.outputs.version }}
@@ -56,7 +56,7 @@ jobs:
   # Job to build and publish Docker image
   build:
     name: Build and publish Docker image
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04-arm
     needs: metadata
 
     steps:
