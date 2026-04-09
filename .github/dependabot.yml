@@ -1,16 +1,22 @@
+---
 version: 2
 updates:
-  # Maintain dependencies for GitHub Actions
   - package-ecosystem: "github-actions"
     directory: "/"
+    open-pull-requests-limit: 1
+    groups:
+      actions-deps:
+        patterns:
+          - "*"
     schedule:
-      interval: "weekly"
-    assignees:
-      - "flash1228"
-  # Check for Docker image updates
-  - package-ecosystem: "docker"
-    directory: "/caddy-cloudflare"
+      interval: "monthly"
+    
+  - package-ecosystem: "gomod"
+    directory: "/"
+    open-pull-requests-limit: 1
+    groups:
+      all-updates:
+        patterns:
+          - "*"
     schedule:
-      interval: "daily"
-    assignees:
-      - "flash1228"
+      interval: "monthly"
