@@ -19,5 +19,6 @@ jobs:
           ENTRYPOINT ["/caddy"]
           EOF
           docker build -t caddy-custom:latest -f Dockerfile .
+          
       - name: Run container
         run: docker run --rm caddy-custom:latest version
