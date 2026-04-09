@@ -9,7 +9,7 @@ on:
   push:
     branches: main
     paths:
-      - Dockerfile
+      - caddy-cloudflare/Dockerfile
 
 # Prevent overlapping runs for the same workflow and ref
 concurrency:
