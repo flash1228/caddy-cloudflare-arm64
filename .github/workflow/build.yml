@@ -5,9 +5,9 @@ name: Build caddy-cloudflare
 on: [push]
 
 # Prevent overlapping runs for the same workflow and ref
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+#concurrency:
+#  group: ${{ github.workflow }}-${{ github.ref }}
+#  cancel-in-progress: true
 
 # Environment variables available to all jobs and steps in this workflow
 env:
